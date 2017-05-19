@@ -5,10 +5,10 @@ set -ex
 cleanup () {
   unset -f nvm_download nvm_get_checksum_alg nvm_get_mirror
 }
-die () { echo $@ ; cleanup ; exit 1; }
+die () { echo "$@" ; cleanup ; exit 1; }
 
 set +e # TODO: fix
-. ../../../nvm.sh
+\. ../../../nvm.sh
 set -e
 
 nvm_get_mirror() {

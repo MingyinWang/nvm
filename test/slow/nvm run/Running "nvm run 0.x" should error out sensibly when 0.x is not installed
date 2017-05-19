@@ -1,9 +1,9 @@
 #!/bin/sh
 
 
-die () { echo $@ ; exit 1; }
+die () { echo "$@" ; exit 1; }
 
-. ../../../nvm.sh
+\. ../../../nvm.sh
 
 EXPECTED_OUTPUT='N/A: version "v0.2" is not yet installed.
 

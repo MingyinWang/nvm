@@ -5,9 +5,9 @@ set -ex
 cleanup() {
   unset -f nvm_has_system_node nvm_print_npm_version
 }
-die() { echo $@ ; cleanup ; exit 1; }
+die() { echo "$@" ; cleanup ; exit 1; }
 
-. ../../nvm.sh
+\. ../../nvm.sh
 
 nvm_has_system_node() { return 0; }
 nvm_print_npm_version() { command printf ' (npm v1.2.3)'; }

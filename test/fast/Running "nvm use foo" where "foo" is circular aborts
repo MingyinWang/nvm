@@ -2,13 +2,13 @@
 
 set -ex
 
-die () { echo $@ ; cleanup ; exit 1; }
+die () { echo "$@" ; cleanup ; exit 1; }
 
 cleanup() {
   rm -rf "$(nvm_alias_path)/foo"
 }
 
-. ../../nvm.sh
+\. ../../nvm.sh
 
 nvm_make_alias foo foo
 

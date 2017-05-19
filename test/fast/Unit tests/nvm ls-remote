@@ -2,17 +2,17 @@
 
 set -ex
 
-die () { echo $@ ; cleanup ; exit 1; }
+die () { echo "$@" ; cleanup ; exit 1; }
 
 cleanup() {
   unset -f nvm_download nvm_ls_remote nvm_ls_remote_iojs
 }
 
-. ../../../nvm.sh
+\. ../../../nvm.sh
 
 nvm deactivate 2>/dev/null || die 'unable to deactivate'
 
-. ../../common.sh
+\. ../../common.sh
 
 REMOTE="$PWD/mocks/nvm_ls_remote.txt"
 nvm_ls_remote() {
